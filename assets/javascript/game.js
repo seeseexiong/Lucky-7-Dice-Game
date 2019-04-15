@@ -13,13 +13,11 @@ function updateMoney() {
 function win() {
     money += 4;
     console.log("you win " + money)
-    updateMoney();
 }
 
 function loss() {
     money--;
     console.log("you loss " + money)
-    updateMoney();
 }
 
 //roll dice
@@ -32,7 +30,7 @@ function rollDice() {
     document.getElementById('dice1-text').innerHTML = dice1;
     document.getElementById('dice2-text').innerHTML = dice2;
 
-    if (dice1 + dice2 == 3) {
+    if (dice1 + dice2 == 7) {
         win();
         updateMoney();
     }
@@ -42,7 +40,7 @@ function rollDice() {
     }
 }
 
-//Game Start ============================================================
+//GAME START HERE ============================================================
 
 var playButton = document.getElementById('playBtn');
 var betButton = document.getElementById('betBtn');
