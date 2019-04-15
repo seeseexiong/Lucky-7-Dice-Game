@@ -2,24 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LUCKY 7</title>
+    <title> Bootstrap LUCKY 7</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 </head>
 </head>
 <body>
-    <h1>Lucky 7</h1>
-    <p>You have 2 dice. If you get a vaule of 7, you win.</p>
-    <div id="wrapper">
-        <div class="row">
-            <h3 id="dice1-text">Dice 1: <spam></spam></h3>
-            <h3 id="dice2-text">Dice 2: <spam></spam></h3>
-        </div>
-    </div>
+    <h1 class="center">Lucky 7</h1>
+    <form class="center">Starting Bet:
+        <input id="amount" type="number" placeholder="$0.00" class="center">
+        <br><br>
+        <input id="betBtn" value="BET" class="btn btn-primary">
+        <input id="playBtn" value="PLAY" class="btn btn-primary">
+    </form>
+    <h2 >Your Money: $<spam id="yourMoney-text">0</spam>.00</h2>
+    <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
+    <h3>Dice 2: <spam id="dice2-text">0</spam></h3>
+
+    <br>
+    <br>
+    
+    <h2 class="center" id="resultsBox">Results</h2>
+    <!-- TABLE starts here -->
+    <table class="table table-striped" id="resultTable">
+        <tbody>
+            <tr>
+                <td>Starting Bet</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Highest Amount Won</td>
+                <td>$</td>
+            </tr>
+            <tr>
+                <td>Die Roll At The Highest Amount Won</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
   
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 </body>
 </html>
