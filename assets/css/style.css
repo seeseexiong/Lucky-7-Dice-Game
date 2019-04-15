@@ -1,3 +1,44 @@
 #wrapper {
     border: solid 5px black;
 }
+
+.center {
+    text-align: center;
+}
+
+
+/* border for amount */
+#amount, #playBtn{
+    border: 3px black solid;
+    padding: 5px;
+}
+
+/* width for text feild */
+#amount {
+    width: 100px;
+}
+
+/* style for PLAY button */
+#playBtn{
+    box-shadow: 3px 3px #9a9a9a;
+    /* background-color: rgb(69, 127, 189); */
+}
+
+#resultTable {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+  width: 30%;
+
+  padding-top: 60px; 
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+#resultsBox {
+  border-top: solid black 3px;
+}
