@@ -13,15 +13,26 @@
 </head>
 <body>
     <h1 class="center">Lucky 7</h1>
+    <div class="center">
+        <i class="center">Instrutions</i><br>
+        <i>1.) Place a bet and click on the green button to submit your bet.</i>
+        <i>2.) Click play to roll the dice</i><br><br>
+    </div>
+    
     <form class="center">Starting Bet:
         <input id="amount" type="number" placeholder="$0.00" class="center">
         <br><br>
-        <input id="betBtn" value="BET" class="btn btn-primary">
-        <input id="playBtn" value="PLAY" class="btn btn-primary">
+        <input id="betBtn" value="BET" class="btn btn-success btn-sm">
+        <input id="playBtn" value="PLAY" class="btn btn-primary btn-sm">
     </form>
-    <h2 >Your Money: $<spam id="yourMoney-text">0</spam>.00</h2>
-    <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
-    <h3>Dice 2: <spam id="dice2-text">0</spam></h3>
+    <h2 >Your Money: <spam id="cents">$<spam id="yourMoney-text">0</spam>.00</spam></h2>
+
+    <!-- Dice Box -->
+    <div class="center border border-info rounded" id="diceBox" >
+        <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
+        <h3>Dice 2: <spam id="dice2-text">0</spam></h3>
+    </div>
+
 
     <br>
     <br>
