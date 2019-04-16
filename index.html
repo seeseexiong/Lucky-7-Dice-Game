@@ -26,7 +26,7 @@
         <input id="playBtn" value="PLAY" class="btn btn-primary btn-sm">
     </form>
     <h2 >Your Money: <spam id="cents">$<spam id="yourMoney-text">0</spam>.00</spam></h2>
-
+    <h4 id="endMessage" class="center"></h4>
     <!-- Dice Box -->
     <div class="center border border-info rounded" id="diceBox" >
         <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
@@ -43,19 +43,19 @@
         <tbody>
             <tr>
                 <td>Starting Bet</td>
-                <td>$</td>
+                <td>$<spam id="startingBet-text"></spam></td>
             </tr>
             <tr>
                 <td>Total Rolls Before Going Broke</td>
-                <td>0</td>
+                <td id="totalRolls-text">0</td>
             </tr>
             <tr>
                 <td>Highest Amount Won</td>
-                <td>$</td>
+                <td>$<spam id="highestAmount-text"></spam></td>
             </tr>
             <tr>
-                <td>Die Roll At The Highest Amount Won</td>
-                <td>0</td>
+                <td>Roll Count At The Highest Amount Won</td>
+                <td id="rollCountAtHighest-text">0</td>
             </tr>
         </tbody>
     </table>
