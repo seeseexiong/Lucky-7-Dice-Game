@@ -61,9 +61,11 @@ function rollDice() {
         console.log("--You're OUT OF money!--")
         //sort wonAmounts array and store last element (which is the largest
         //amount) inside of the var highestAmountWon
-        wonAmounts.sort();
-        console.log("SORTED: "+ wonAmounts.sort())
-        highestAmountWon = wonAmounts[wonAmounts.length-1];
+        var sorted = wonAmounts.sort( function(a,b) {
+            return a - b
+        });
+        console.log("SORTED: "+ sorted)
+        highestAmountWon = sorted[sorted.length-1];
         console.log("Largest Amount Won: $" + highestAmountWon)
         printResults();
     }
@@ -91,10 +93,10 @@ betButton.addEventListener('click', function() {
 playButton.addEventListener('click', function() {
     if (money > 0) {
         clickPlayBtn++;
+        console.log("Round: " + clickPlayBtn)
         wonAmounts.push(money);
         console.log("Current Money: " + wonAmounts);
         rollDice();
-        console.log("play: " + clickPlayBtn)
         console.log("===============================")
     }
     else {
