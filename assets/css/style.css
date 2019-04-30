@@ -2,37 +2,39 @@
     background-color: rgba(255, 254, 212, 0.988);
     margin: 30px;
     padding: 20px;
-}
+};
+
 #mainHeader {
     font-family: 'Bangers', cursive;
     font-size: 50px;
     margin-bottom: 0;
-}
+};
 
 #grayInstructions {
     color: gray;
     margin-top: 20px;
-}
+};
+
 #wrapper {
     border: solid 5px black;
-}
+};
 
 .center {
     text-align: center;
-}
-
+};
 
 /* border for amount */
 #amount{
     border: 3px black solid;
     padding: 5px;
-}
+};
 
 /* color for yourmoney-text */
 #cents {
     color: green;
     background-color: rgb(167, 223, 167);
 }
+
 /* width for text feild */
 #amount {
     width: 100px;
@@ -43,22 +45,21 @@
     box-shadow: 3px 3px #9a9a9a;
     width: 60px;
     /* background-color: rgb(69, 127, 189); */
-}
+};
 
 #resultTable {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-}
+};
 
 h2 {
   width: 30%;
-
   padding-top: 60px; 
   padding-bottom: 10px;
   margin-left: auto;
   margin-right: auto; 
-}
+};
 
 #diceBox {
     width: 20%;
@@ -66,8 +67,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     background-color: rgba(0, 133, 249, 0.406);
-}
+};
 
 #resultsBox {
   border-top: solid black 3px;
-}
+};
