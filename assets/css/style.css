@@ -1,3 +1,18 @@
+#introBox {
+    background-color: rgba(255, 254, 212, 0.988);
+    margin: 30px;
+    padding: 20px;
+}
+#mainHeader {
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+#grayInstructions {
+    color: gray;
+    margin-top: 20px;
+}
 #wrapper {
     border: solid 5px black;
 }

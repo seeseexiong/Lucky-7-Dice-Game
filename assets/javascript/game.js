@@ -22,7 +22,7 @@ function updateMoney() {
 };
 
 function printResults() {
-    document.getElementById('endMessage').innerHTML = "You ran out of money.";
+    document.getElementById('endMessage').innerHTML = "You ran out of money. Scroll down to see your results!";
     document.getElementById('startingBet-text').innerHTML = betAmount.value;
     document.getElementById('totalRolls-text').innerHTML = wonAmounts.length;
     console.log("length: "+ wonAmounts.length)
