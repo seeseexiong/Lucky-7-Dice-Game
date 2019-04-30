@@ -1,17 +1,18 @@
 var dice1 = 0;
 var dice2 = 0;
+//reference input amount and buttons from DOM
 var betAmount = document.getElementById('amount');
 var playButton = document.getElementById('playBtn');
 var betButton = document.getElementById('betBtn');
 //results
+    //store current money that will display on DOM
 var money = 0;
-var clickPlayBtn = 0;
-//each time you roll dice, the count get recorded here
-var rollsBeforeBroke = [];
+    //each time you roll dice, the amount get recorded here
 var wonAmounts = [];
-//store the largest wonAmount element inside of highestAmountWon
+    //store the largest wonAmount element inside of highestAmountWon
 var highestAmountWon = 0;
-var rollCountAtHighest = [];
+    //store the roll-count of the highest amount
+var rollCountAtHighest = 0;
 
 
 //FUNCTIONS that are used multiple times =====================================
@@ -19,16 +20,17 @@ var rollCountAtHighest = [];
 function updateMoney() {
     document.getElementById('yourMoney-text').innerHTML = money;
 };
+
 function printResults() {
     document.getElementById('endMessage').innerHTML = "You ran out of money.";
     document.getElementById('startingBet-text').innerHTML = betAmount.value;
-    document.getElementById('totalRolls-text').innerHTML = clickPlayBtn;
+    document.getElementById('totalRolls-text').innerHTML = wonAmounts.length;
+    console.log("length: "+ wonAmounts.length)
     document.getElementById('highestAmount-text').innerHTML = highestAmountWon;
     document.getElementById('rollCountAtHighest-text').innerHTML = rollCountAtHighest;
 };
+
 function resetResults() {
-    clickPlayBtn = 0;
-    rollsBeforeBroke = [];
     wonAmounts = [];
     highestAmountWon = 0;
     rollCountAtHighest = [];
@@ -36,8 +38,8 @@ function resetResults() {
 };
 
 //roll dice
-    //dice roll random number, then display it on DOM
-    //if sum is 7 then you win, or else you lose
+    //dice select random number, then display it on DOM
+    //if sum of dice 1 and dice 2 equals 7 then you win, or else you lose
     //if money is 0, then print out results
 function rollDice() {
     dice1 = Math.ceil(Math.random()*6);
@@ -59,20 +61,17 @@ function rollDice() {
 
     if (money == 0 ) {
         console.log("--You're OUT OF money!--")
-        //sort wonAmounts array and store last element (which is the largest
-        //amount) inside of the var highestAmountWon
-        var sorted = wonAmounts.sort( function(a,b) {
-            return a - b
-        });
-        console.log("SORTED: "+ sorted)
-        highestAmountWon = sorted[sorted.length-1];
-        console.log("Largest Amount Won: $" + highestAmountWon)
+        //highest amount won is the max value of the wonAmounts array
+        highestAmountWon = Math.max.apply( null, wonAmounts );
+        console.log("highest amount: "+ highestAmountWon)
+
+        //the roll-count of the highest number is the index + 1 of the highestAmountWon
+        rollCountAtHighest = wonAmounts.indexOf(highestAmountWon) + 1;
+        console.log("highest amount won at round: "+ rollCountAtHighest )
         printResults();
     }
 };
 
-
-//============================================================================
 //GAME START HERE ============================================================
 
 //When BET button is click - run the function
@@ -82,7 +81,7 @@ betButton.addEventListener('click', function() {
     money = betAmount.value;
     updateMoney();
     resetResults();
-})
+});
 
 //When PLAY button is clicked - run the function
     //if money is greater than 0    
@@ -91,21 +90,13 @@ betButton.addEventListener('click', function() {
     //of else if money is less than zero then they need to place a bet
 
 playButton.addEventListener('click', function() {
-    if (money > 0) {
-        clickPlayBtn++;
-        console.log("Round: " + clickPlayBtn)
+    if (money > 0) {        
         wonAmounts.push(money);
-        console.log("Current Money: " + wonAmounts);
+        console.log("Recently Have Money: " + wonAmounts);
         rollDice();
         console.log("===============================")
     }
     else {
         alert("You need to place a bet.")
-    }
-})
-
-
-
-
-
-
+    };
+});
