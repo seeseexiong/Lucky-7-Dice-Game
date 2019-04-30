@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Bootstrap LUCKY 7</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-</head>
-</head>
-</head>
-<body>
-    <div id="introBox" class="center">
-        <h1 id="mainHeader" class="center">Lucky 7</h1>
-        <h6>Each time your dices adds up to 7 you win $4. If not, you lose $1.</h6>
-        <div id="grayInstructions">
-            <i class="center">Instrutions</i><br>
-            <i>1.) Place a bet and click on the green button to submit your bet.</i>
-            <i>2.) Click play to roll the dice.</i><br><br>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title> Bootstrap LUCKY 7</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="introBox" class="center">
+            <h1 id="mainHeader" class="center">Lucky 7</h1>
+            <h6>Each time your dices adds up to 7 you win $4. If not, you lose $1.</h6>
+            <div id="grayInstructions" class="center">
+                <i class="center">Instrutions</i><br>
+                <i>1.) Place a bet and click on the green button to submit your bet.</i>
+                <i>2.) Click play to roll the dice.</i><br><br>
+            </div>
         </div>
-    </div>
-    
-    <form class="center">Starting Bet:
-        <input id="amount" type="number" placeholder="$0.00" class="center"><br><br>
-        <input id="betBtn" value="BET" class="btn btn-success btn-sm">
-        <input id="playBtn" value="PLAY" class="btn btn-primary btn-sm">
-    </form>
+
+        <form class="center">
+            Starting Bet:<input id="amount" type="number" placeholder="$0.00" class="center"><br><br>
+            <input id="betBtn" value="BET" class="btn btn-success btn-sm center">
+            <input id="playBtn" value="PLAY" class="btn btn-primary btn-sm">
+        </form>
 
 
-    <!-- ======================================================================== -->
-    <h2 >Your Money: <spam id="cents">$<spam id="yourMoney-text">0</spam>.00</spam></h2>
-    <h4 id="endMessage" class="center"></h4>
-    <!-- Dice Box -->
-    <div class="center border border-info rounded" id="diceBox" >
-        <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
-        <h3>Dice 2: <spam id="dice2-text">0</spam></h3>
-    </div><br><br>
+        <!-- ======================================================================== -->
+        <h2 >Your Money: <spam id="cents">$<spam id="yourMoney-text">0</spam>.00</spam></h2>
+        <h4 id="endMessage" class="center"></h4>
+        <!-- Dice Box -->
+        <div class="center border border-info rounded" id="diceBox" >
+            <h3>Dice 1: <spam id="dice1-text">0</spam></h3>
+            <h3>Dice 2: <spam id="dice2-text">0</spam></h3>
+        </div><br><br>
 
-    <!-- ======================================================================== -->
-    <h2 class="center" id="resultsBox">Results</h2>
-    <!-- TABLE starts here -->
-    <table class="table table-striped" id="resultTable">
-        <tbody>
-            <tr>
-                <td>Starting Bet</td>
-                <td>$<spam id="startingBet-text"></spam></td>
-            </tr>
-            <tr>
-                <td>Total Rolls Before Going Broke</td>
-                <td id="totalRolls-text">0</td>
-            </tr>
-            <tr>
-                <td>Highest Amount Won</td>
-                <td>$<spam id="highestAmount-text"></spam></td>
-            </tr>
-            <tr>
-                <td>Roll Count At The Highest Amount Won</td>
-                <td id="rollCountAtHighest-text">0</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- ======================================================================== -->
+        <h2 class="center" id="resultsBox">Results</h2>
+        <!-- TABLE starts here -->
+        <table class="table table-striped" id="resultTable">
+            <tbody>
+                <tr>
+                    <td>Starting Bet</td>
+                    <td>$<spam id="startingBet-text"></spam></td>
+                </tr>
+                <tr>
+                    <td>Total Rolls Before Going Broke</td>
+                    <td id="totalRolls-text">0</td>
+                </tr>
+                <tr>
+                    <td>Highest Amount Won</td>
+                    <td>$<spam id="highestAmount-text"></spam></td>
+                </tr>
+                <tr>
+                    <td>Roll Count At The Highest Amount Won</td>
+                    <td id="rollCountAtHighest-text">0</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <!-- link to my external javascript external file -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-    <!-- Bootstrap JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-</body>
+        <!-- link to my external javascript external file -->
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <!-- Bootstrap JS CDN -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </body>
 </html>

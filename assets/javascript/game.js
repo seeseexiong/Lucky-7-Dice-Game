@@ -1,6 +1,6 @@
 var dice1 = 0;
 var dice2 = 0;
-//reference input amount and buttons from DOM
+//references input amount and buttons from DOM
 var betAmount = document.getElementById('amount');
 var playButton = document.getElementById('playBtn');
 var betButton = document.getElementById('betBtn');
